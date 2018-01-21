@@ -54,11 +54,14 @@ open class JAlgoArenaApiGatewayApplication {
         })
         return CorsFilter(source)
     }
+
+
     @Bean
-        open fun jalGoArenaApi(): Docket {
-            return Docket(DocumentationType.SWAGGER_2)
-            .select().apis(RequestHandlerSelectors.any())
-            .paths(PathSelectors.any()).build()
+    open fun jalGoArenaApi(): Docket {
+        return Docket(DocumentationType.SWAGGER_2)
+                .select().apis(RequestHandlerSelectors.any())
+                .paths(PathSelectors.any()).build()
+    }
 }
 
 fun main(args: Array<String>) {
